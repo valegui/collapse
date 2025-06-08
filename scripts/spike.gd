@@ -9,6 +9,9 @@ func _process(delta: float) -> void:
 
 func _on_player_detected_body_entered(body: Node2D) -> void:
 	print("damaging player")
+	print(body.name)
+	if body.name == "Player":
+		body.hit()
 
 
 

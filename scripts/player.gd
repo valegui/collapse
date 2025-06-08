@@ -5,14 +5,24 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @onready var box = $Box
+const original_position = Vector2(-110, 100)
 
 var alive = true
 var box_visible = false
+var is_hit = false
+
+func _ready():
+	is_hit = false
+	position = original_position
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		
+	# Hit
+	if is_hit:
+		game_restart()
 	
 
 	# Handle jump.
@@ -30,3 +40,10 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 
 	move_and_slide()
+
+func hit():
+	is_hit = true
+	
+func game_restart():
+	is_hit = false
+	position = original_position

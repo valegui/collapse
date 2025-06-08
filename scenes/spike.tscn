@@ -11,13 +11,13 @@ script = ExtResource("1_7a7y0")
 texture = ExtResource("1_ljd5v")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(25, 28, -1, -25, -31, 29)
+polygon = PackedVector2Array(25, 28, -1, -25, -35, 31)
 
 [node name="PlayerDetected" type="Area2D" parent="." groups=["box"]]
 collision_layer = 4
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerDetected"]
-polygon = PackedVector2Array(-1, -29, -34, 28, 27, 28)
+polygon = PackedVector2Array(-1, -29, -36, 32, 29, 31)
 
 [connection signal="body_entered" from="PlayerDetected" to="." method="_on_player_detected_body_entered"]
 [connection signal="body_exited" from="PlayerDetected" to="." method="_on_player_detected_body_exited"]

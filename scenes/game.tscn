@@ -18,6 +18,8 @@ position = Vector2(131, 104)
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(102, 230)
+collision_layer = 2
+collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("WorldBoundaryShape2D_uwrxv")

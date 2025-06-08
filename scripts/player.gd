@@ -46,4 +46,6 @@ func hit():
 	
 func game_restart():
 	is_hit = false
+	get_tree().call_group("box", "appear", position)
 	position = original_position
+	

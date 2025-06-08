@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bycepsqmptkvg"]
+[gd_scene load_steps=7 format=3 uid="uid://bycepsqmptkvg"]
 
 [ext_resource type="PackedScene" uid="uid://bu5g33eec6mgc" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cptm1ko3mmwkd" path="res://scenes/killzone.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bu2sp7hercpyx" path="res://scenes/spike.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://d0bny5xly81u7" path="res://scenes/box.tscn" id="4_lbhrr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 
@@ -16,10 +17,12 @@ position = Vector2(131, 104)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(131, 104)
 
+[node name="Box" parent="." instance=ExtResource("4_lbhrr")]
+
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(102, 230)
 collision_layer = 2
-collision_mask = 9
+collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("WorldBoundaryShape2D_uwrxv")

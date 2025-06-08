@@ -5,7 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @onready var box = $Box
-const original_position = Vector2(-110, 100)
+const original_position = Vector2(100, 450)
 
 var alive = true
 var box_visible = false
@@ -16,6 +16,7 @@ func _ready():
 	position = original_position
 
 func _physics_process(delta: float) -> void:
+	print(position)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

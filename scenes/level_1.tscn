@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg1xunoydim8h"]
+[gd_scene load_steps=7 format=3 uid="uid://dg1xunoydim8h"]
 
+[ext_resource type="PackedScene" uid="uid://daypidqhxjqdb" path="res://scenes/next_level.tscn" id="1_4nkto"]
 [ext_resource type="PackedScene" uid="uid://bu2sp7hercpyx" path="res://scenes/spike.tscn" id="1_014kd"]
 [ext_resource type="PackedScene" uid="uid://bu5g33eec6mgc" path="res://scenes/player.tscn" id="1_bswci"]
 [ext_resource type="PackedScene" uid="uid://d0bny5xly81u7" path="res://scenes/box.tscn" id="2_5xbjy"]
@@ -23,6 +24,9 @@ offset_top = 484.0
 offset_right = 2109.0
 offset_bottom = 654.0
 color = Color(0.498523, 0.571256, 0.56201, 1)
+
+[node name="NextLevel" parent="." instance=ExtResource("1_4nkto")]
+position = Vector2(1121, 422)
 
 [node name="Player" parent="." instance=ExtResource("1_bswci")]
 position = Vector2(111, 385)

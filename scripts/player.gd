@@ -4,9 +4,9 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-@onready var box = $Box
+#@onready var box = $Box
 var original_position = Global.player_original_position
-
+@onready var sfx: AudioStreamPlayer = $SoundEffects
 var alive = true
 var box_visible = false
 var is_hit = false
@@ -23,12 +23,16 @@ func _physics_process(delta: float) -> void:
 		
 	# Hit
 	if is_hit:
+		sfx.set_stream(load("res://Hit4.wav"))
+		sfx.play()
 		game_restart()
 	
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		sfx.set_stream(load("res://Jump4.wav"))
+		sfx.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

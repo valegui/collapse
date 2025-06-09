@@ -9,5 +9,6 @@ func _on_body_entered(body: Node):
 			next_scene_name = "res://scenes/game_over.tscn"
 		else:
 			next_scene_name = "res://scenes/level_" + str(next_scene_n) + ".tscn"
+		Global.player_original_position = Vector2(100, 450)
 		var next_scene = load(next_scene_name)
 		get_tree().change_scene_to_packed(next_scene)

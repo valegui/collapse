@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://di4e4datxdnfp"]
+[gd_scene load_steps=9 format=3 uid="uid://di4e4datxdnfp"]
 
 [ext_resource type="PackedScene" uid="uid://daypidqhxjqdb" path="res://scenes/next_level.tscn" id="1_l1kof"]
 [ext_resource type="Script" uid="uid://cn7qosd8nu661" path="res://scripts/level_7.gd" id="1_v7yg4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0bny5xly81u7" path="res://scenes/box.tscn" id="3_ci1vt"]
 [ext_resource type="PackedScene" uid="uid://bu2sp7hercpyx" path="res://scenes/spike.tscn" id="4_ophlp"]
 [ext_resource type="PackedScene" uid="uid://cia6jsfphwaog" path="res://scenes/static_box.tscn" id="5_wu5f3"]
+[ext_resource type="PackedScene" uid="uid://cp3eowpnojgjc" path="res://scenes/turret.tscn" id="7_ci1vt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5xbjy"]
 
@@ -84,5 +85,5 @@ position = Vector2(1109, 323)
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="StaticBox10" parent="enemies" instance=ExtResource("5_wu5f3")]
-position = Vector2(1775, 451)
+[node name="Turret" parent="enemies" instance=ExtResource("7_ci1vt")]
+position = Vector2(1774, 451)

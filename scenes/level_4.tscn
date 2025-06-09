@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8r2y8db034nx"]
+[gd_scene load_steps=8 format=3 uid="uid://b8r2y8db034nx"]
 
 [ext_resource type="PackedScene" uid="uid://daypidqhxjqdb" path="res://scenes/next_level.tscn" id="1_wom6i"]
 [ext_resource type="PackedScene" uid="uid://bu5g33eec6mgc" path="res://scenes/player.tscn" id="2_ycko3"]
 [ext_resource type="PackedScene" uid="uid://d0bny5xly81u7" path="res://scenes/box.tscn" id="3_x7blo"]
 [ext_resource type="PackedScene" uid="uid://bu2sp7hercpyx" path="res://scenes/spike.tscn" id="4_qsmat"]
 [ext_resource type="PackedScene" uid="uid://cia6jsfphwaog" path="res://scenes/static_box.tscn" id="5_yk4f3"]
+[ext_resource type="PackedScene" uid="uid://cp3eowpnojgjc" path="res://scenes/turret.tscn" id="6_ycko3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5xbjy"]
 
@@ -76,5 +77,5 @@ position = Vector2(1109, 323)
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="StaticBox10" parent="enemies" instance=ExtResource("5_yk4f3")]
-position = Vector2(1668, 452)
+[node name="Turret" parent="enemies" instance=ExtResource("6_ycko3")]
+position = Vector2(1669, 452)

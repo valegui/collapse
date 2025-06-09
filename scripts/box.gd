@@ -9,10 +9,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	pass
+	angular_velocity = 0.0
 	
 
 func appear(pos):
+	linear_velocity = Vector2.ZERO
 	position = Vector2(pos.x, pos.y)
 	visible = true
 	

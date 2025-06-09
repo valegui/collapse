@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sd4vo"]
 radius = 30.0
-height = 94.0
+height = 166.0
 
 [node name="NextLevel" type="Area2D"]
 collision_layer = 2
@@ -15,7 +15,7 @@ script = ExtResource("1_sd4vo")
 texture = ExtResource("1_rf0ph")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, 15)
+position = Vector2(-7, -17)
 shape = SubResource("CapsuleShape2D_sd4vo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=3 uid="uid://cn0bjbif1skt0"]
+
+[ext_resource type="PackedScene" uid="uid://daypidqhxjqdb" path="res://scenes/next_level.tscn" id="1_hi6ks"]
+[ext_resource type="PackedScene" uid="uid://bu5g33eec6mgc" path="res://scenes/player.tscn" id="2_6x5s0"]
+[ext_resource type="PackedScene" uid="uid://d0bny5xly81u7" path="res://scenes/box.tscn" id="3_uwnnm"]
+[ext_resource type="PackedScene" uid="uid://bu2sp7hercpyx" path="res://scenes/spike.tscn" id="4_fidgd"]
+[ext_resource type="PackedScene" uid="uid://cia6jsfphwaog" path="res://scenes/static_box.tscn" id="5_isi3j"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5xbjy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbt7t"]
+size = Vector2(3612, 197.5)
+
+[node name="Level6" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(403, 485.25)
+shape = SubResource("WorldBoundaryShape2D_5xbjy")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -595.0
+offset_top = 484.0
+offset_right = 4565.0
+offset_bottom = 654.0
+color = Color(0.498523, 0.571256, 0.56201, 1)
+
+[node name="NextLevel" parent="." instance=ExtResource("1_hi6ks")]
+position = Vector2(2870, 240)
+
+[node name="Player" parent="." instance=ExtResource("2_6x5s0")]
+position = Vector2(111, 385)
+
+[node name="Box" parent="." instance=ExtResource("3_uwnnm")]
+position = Vector2(-107, 451)
+
+[node name="spikes" type="Node2D" parent="."]
+
+[node name="Spike4" parent="spikes" instance=ExtResource("4_fidgd")]
+position = Vector2(437, 452)
+
+[node name="Spike5" parent="spikes" instance=ExtResource("4_fidgd")]
+position = Vector2(375, 452)
+
+[node name="Spike6" parent="spikes" instance=ExtResource("4_fidgd")]
+position = Vector2(1077, 259)
+
+[node name="Spike7" parent="spikes" instance=ExtResource("4_fidgd")]
+position = Vector2(1139, 259)
+
+[node name="Spike8" parent="spikes" instance=ExtResource("4_fidgd")]
+position = Vector2(1417, 259)
+
+[node name="Spike9" parent="spikes" instance=ExtResource("4_fidgd")]
+position = Vector2(2524, 259)
+
+[node name="static_boxes" type="Node2D" parent="."]
+
+[node name="StaticBox" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(853, 452)
+
+[node name="StaticBox7" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(789, 452)
+
+[node name="StaticBox3" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(916, 453)
+
+[node name="StaticBox2" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(853, 388)
+
+[node name="StaticBox5" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(1687, 258)
+
+[node name="StaticBox9" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(2459, 258)
+
+[node name="StaticBox6" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(1879, 258)
+
+[node name="StaticBox8" parent="static_boxes" instance=ExtResource("5_isi3j")]
+position = Vector2(1879, 194)
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="StaticBox4" parent="enemies" instance=ExtResource("5_isi3j")]
+position = Vector2(1352, 258)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(2755, 389.25)
+shape = SubResource("RectangleShape2D_tbt7t")
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D2"]
+offset_left = 949.0
+offset_top = 291.0
+offset_right = 4565.0
+offset_bottom = 509.0
+color = Color(0.498523, 0.571256, 0.56201, 1)

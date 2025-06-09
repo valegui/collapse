@@ -5,7 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @onready var box = $Box
-const original_position = Vector2(100, 450)
+var original_position = Global.player_original_position
 
 var alive = true
 var box_visible = false
@@ -48,5 +48,5 @@ func hit():
 func game_restart():
 	is_hit = false
 	get_tree().call_group("box", "appear", position)
-	position = original_position
+	position = Global.player_original_position
 	

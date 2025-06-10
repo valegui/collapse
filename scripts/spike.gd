@@ -8,11 +8,10 @@ func _process(delta: float) -> void:
 
 
 func _on_player_detected_body_entered(body: Node2D) -> void:
-	print("damaging player")
-	if body.name == "Player":
+	if "Player" in body.name:
 		body.hit()
 
 
 
 func _on_player_detected_body_exited(body: Node2D) -> void:
-	print("no longer damaging player")
+	pass

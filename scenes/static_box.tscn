@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqg2tbbo42ci2" path="res://assets/square.png" id="1_7dvs6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n37rl"]
-size = Vector2(64, 64)
+size = Vector2(68, 68)
 
 [node name="StaticBox" type="StaticBody2D"]
 collision_layer = 2

@@ -75,11 +75,17 @@ func die() -> void:
 
 # === Corpse Spawning ===
 func spawn_corpse(parent_node: Node, position: Vector2) -> void:
+	var corpses = get_tree().get_nodes_in_group("corpse")
+	var last_corpse = null
+	if corpses.size() > 0:
+		last_corpse = corpses[0]
+		last_corpse.queue_free()
 	if corpse_instance:
 		corpse_instance.queue_free()
 
 	corpse_instance = corpse_scene.instantiate()
 	parent_node.add_child(corpse_instance)
+	corpse_instance.add_to_group("corpse")
 	corpse_instance.name = "Corpse"
 	corpse_instance.global_position = position
 	corpse_instance.visible = true

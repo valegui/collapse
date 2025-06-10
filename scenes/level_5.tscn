@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://wf3qti8c5sfy"]
+[gd_scene load_steps=10 format=3 uid="uid://wf3qti8c5sfy"]
 
 [ext_resource type="PackedScene" uid="uid://daypidqhxjqdb" path="res://scenes/next_level.tscn" id="1_tbt7t"]
 [ext_resource type="PackedScene" uid="uid://bu5g33eec6mgc" path="res://scenes/player.tscn" id="2_cynta"]
@@ -11,6 +11,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbt7t"]
 size = Vector2(1698, 197.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cynta"]
+size = Vector2(63.5, 49.5)
 
 [node name="Level5" type="Node2D"]
 
@@ -82,3 +85,10 @@ offset_top = 291.0
 offset_right = 2631.0
 offset_bottom = 509.0
 color = Color(0.498523, 0.571256, 0.56201, 1)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(917.25, 394.75)
+shape = SubResource("RectangleShape2D_cynta")

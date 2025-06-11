@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://daypidqhxjqdb" path="res://scenes/next_level.tscn" id="1_hi6ks"]
 [ext_resource type="PackedScene" uid="uid://bu5g33eec6mgc" path="res://scenes/player.tscn" id="2_6x5s0"]
-[ext_resource type="PackedScene" uid="uid://d0bny5xly81u7" path="res://scenes/corpse.tscn" id="3_uwnnm"]
 [ext_resource type="PackedScene" uid="uid://bu2sp7hercpyx" path="res://scenes/spike.tscn" id="4_fidgd"]
 [ext_resource type="PackedScene" uid="uid://cia6jsfphwaog" path="res://scenes/static_box.tscn" id="5_isi3j"]
 [ext_resource type="PackedScene" uid="uid://cp3eowpnojgjc" path="res://scenes/turret.tscn" id="6_6x5s0"]
@@ -14,6 +13,9 @@ size = Vector2(3612, 197.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6x5s0"]
 size = Vector2(63.5, 49.5)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6x5s0"]
+distance = -5.0
 
 [node name="Level6" type="Node2D"]
 
@@ -37,9 +39,6 @@ position = Vector2(2870, 240)
 
 [node name="Player" parent="." instance=ExtResource("2_6x5s0")]
 position = Vector2(111, 385)
-
-[node name="Box" parent="." instance=ExtResource("3_uwnnm")]
-position = Vector2(-107, 451)
 
 [node name="spikes" type="Node2D" parent="."]
 
@@ -113,3 +112,54 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2(917.25, 394.75)
 shape = SubResource("RectangleShape2D_6x5s0")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(2218, 6)
+rotation = 4.71239
+collision_layer = 2
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(88, 854)
+shape = SubResource("WorldBoundaryShape2D_6x5s0")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4"]
+offset_left = -1207.0
+offset_top = 853.0
+offset_right = 1471.0
+offset_bottom = 1883.0
+color = Color(0.498523, 0.571256, 0.56201, 1)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(402, 0)
+rotation = 1.5708
+collision_layer = 2
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(366, 400)
+shape = SubResource("WorldBoundaryShape2D_6x5s0")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D5"]
+offset_left = -1331.0
+offset_top = 402.0
+offset_right = 1347.0
+offset_bottom = 1098.0
+color = Color(0.498523, 0.571256, 0.56201, 1)
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(490, 384)
+rotation = 3.14159
+collision_layer = 2
+collision_mask = 31
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(150, 823)
+shape = SubResource("WorldBoundaryShape2D_6x5s0")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D6"]
+offset_left = -2789.0
+offset_top = 830.0
+offset_right = 1347.0
+offset_bottom = 1526.0
+color = Color(0.498523, 0.571256, 0.56201, 1)

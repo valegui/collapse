@@ -1,5 +1,6 @@
 extends Node
 
+const player_restart_position = Vector2(100, 450)
 var player_original_position = Vector2(100, 450)
 
 # Called when the node enters the scene tree for the first time.

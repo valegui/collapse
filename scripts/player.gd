@@ -30,14 +30,15 @@ func _physics_process(delta: float) -> void:
 
 	# Handle hit
 	if is_hit:
-
 		play_sound("res://Hit4.wav")
 		die()
-
 	# Handle jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		play_sound("res://Jump4.wav")
+	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
 
 	# Handle horizontal movement
 	var direction := Input.get_axis("ui_left", "ui_right")
